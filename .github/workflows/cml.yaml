@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          pip install -r requirements.txt --cache-dir .pip_cache
+          sudo -H pip install -r requirements.txt 
           python train.py  # generate plot.png
  
           # Create CML report
@@ -17,3 +17,4 @@ jobs:
           cml comment create report.md
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
