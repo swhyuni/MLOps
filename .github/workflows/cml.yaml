@@ -17,4 +17,3 @@ jobs:
           cml comment create report.md
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
